@@ -1,0 +1,18 @@
+.pnl-detail-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  background-color: #397494;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}

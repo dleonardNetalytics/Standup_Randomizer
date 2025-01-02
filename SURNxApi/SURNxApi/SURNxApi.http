@@ -1,0 +1,25 @@
+@SURNxApi_HostAddress = http://localhost:5126
+
+POST http://localhost:5126/api/authentication/login
+Content-Type: application/json
+Accept: application/json
+    
+    {
+    "username": "Dave",
+    "password": "tempPassword"
+    }
+
+> {%
+    client.global.set("token", response.body.token);
+%}
+###
+
+GET {{SURNxApi_HostAddress}}/weatherforecast/
+Accept: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{SURNxApi_HostAddress}}/api/TeamMember
+Accept: application/json
+Authorization: Bearer {{token}}
+###

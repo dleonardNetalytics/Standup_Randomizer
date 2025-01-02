@@ -1,0 +1,19 @@
+.window-shell {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
+  background-color: #397494;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.main-panel {
+  width: 100%;
+}
+
+.app-sidebar {
+  height:100%;
+}

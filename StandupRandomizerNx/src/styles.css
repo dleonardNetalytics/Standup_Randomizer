@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '@angular/material/prebuilt-themes/azure-blue.css';
+
+button {
+  background-color: #D9D9D9;
+  border-radius: 8px;
+  height:50px;
+  width: 160px;
+}
+
+.ignore-global-style {
+  background-color: initial;
+  border-radius: initial;
+  height: initial;
+  width: initial;
+}
+
+.app-root {
+  height: 100%;
+  width: 100%;
+}

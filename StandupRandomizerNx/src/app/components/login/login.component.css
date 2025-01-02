@@ -1,0 +1,31 @@
+.form-login {
+  color: #FFFFFF;
+}
+
+.pnl-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 50%;
+  width: 50%;
+  background-color: #397494;
+}
+
+.form-login form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-login label,
+.form-login input {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.form-login button {
+  display: block;
+  margin: 10px auto 0;
+}

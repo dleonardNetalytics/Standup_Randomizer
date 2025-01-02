@@ -1,0 +1,26 @@
+
+<div class="sidebar-shell"
+     [class.collapsed]="collapsed">
+  <div class="sidebar-header">
+    Team Members
+    <div class="d-flex flex-row gap-2">
+      <button class="ignore-global-style toggle-button"
+              *ngIf="!collapsed"
+              (click)="addMember()">
+        +/-
+      </button>
+    <button (click)="toggleSidebar()" class="ignore-global-style toggle-button" [title]="collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'">
+      <span [class]="collapsed ? 'arrow-right' : 'arrow-left'"></span>
+    </button>
+    </div>
+  </div>
+  <div class="sidebar-content">
+    <div class="member-list"
+         *ngIf="!collapsed">
+      <member-card *ngFor="let member of members"
+                   [member]="member"
+                   (memberClick)="memberClick($event)">
+      </member-card>
+    </div>
+</div>
+</div>

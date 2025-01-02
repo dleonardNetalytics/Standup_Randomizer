@@ -1,0 +1,31 @@
+<div class="d-flex flex-column h-100 justify-content-center align-items-center">
+  <mat-card class="pnl-login">
+    <mat-card-header class="d-flex flex-column">
+      <h1 class="form-login">Welcome to Standup Randomizer Nx (SURNx)</h1>
+      <h2 class="form-login">Login</h2>
+    </mat-card-header>
+    <mat-card-content>
+    <form (ngSubmit)="login()" class="form-login">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+      <br />
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+      <br />
+      <button type="submit">Login</button>
+    </form>
+    </mat-card-content>
+  </mat-card>
+</div>

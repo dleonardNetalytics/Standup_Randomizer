@@ -1,0 +1,33 @@
+<div class="main-panel" [ngClass]="{'wait-cursor': isAnimating}">
+  <div class="top-panel" id="pnlTop">
+    <div class="d-flex flex-row h-100 w-100 justify-content-between">
+      <div class="d-flex flex-column w-100">
+        <div class="d-flex flex-column" id="pnlTitleAndDate">
+          <h1>Methasoft Daily Standup</h1>
+          <h2>{{getFormattedDateAndTime()}}</h2>
+        </div>
+        <div class="button-row" id="pnlButtonRow">
+          <button (click)="btnNextClick()" [disabled]="allMembersSelected">
+            Next
+          </button>
+          <button (click)="btnSkipClick()" [disabled]="allMembersSelected">
+            Skip
+          </button>
+        </div>
+      </div>
+      <div class="member-card-pnl">
+        <span style="color: #000000">Selected member</span>
+        <member-detail-card *ngIf="selectedMember" class="member-card"
+                            [selectedMember]="selectedMember"/>
+    </div>
+    </div>
+  </div>
+  <div class="bottom-panel">
+    <div *ngIf="isAnimating" [@fadeInOut] class="random-status">
+      {{currentSaying}}
+    </div>
+  </div>
+  <div *ngIf="isAnimating" class="spinner-overlay">
+    <div class="spinner"></div>
+  </div>
+</div>
